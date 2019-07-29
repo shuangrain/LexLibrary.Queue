@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.IO;
 using System.Messaging;
 using System.Text;
-using Newtonsoft.Json;
 
 namespace LexLibrary.Queue
 {
@@ -42,8 +43,8 @@ namespace LexLibrary.Queue
 
             using (var sr = new StreamReader(message.BodyStream, Encoding.UTF8))
             {
-                var json = sr.ReadToEnd();
-                return JsonConvert.DeserializeObject(json);
+                string json = sr.ReadToEnd();
+                return JToken.Parse(json);
             }
         }
 

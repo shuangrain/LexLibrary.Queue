@@ -1,12 +1,6 @@
-﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
+﻿using Newtonsoft.Json.Linq;
 using System.Diagnostics;
-using System.Linq;
 using System.Messaging;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LexLibrary.Queue
 {
@@ -35,22 +29,22 @@ namespace LexLibrary.Queue
         public T Peek<T>()
         {
             Message msg = _messageQueue.Peek();
-            JObject jObj = msg?.Body as JObject;
-            return jObj.ToObject<T>();
+            JToken jToken = msg?.Body as JToken;
+            return jToken.ToObject<T>();
         }
 
         public T Receive<T>()
         {
             Message msg = _messageQueue.Receive();
-            JObject jObj = msg?.Body as JObject;
-            return jObj.ToObject<T>();
+            JToken jToken = msg?.Body as JToken;
+            return jToken.ToObject<T>();
         }
 
         public T Receive<T>(MessageQueueTransaction mqTransaction)
         {
             Message msg = _messageQueue.Receive(mqTransaction);
-            JObject jObj = msg?.Body as JObject;
-            return jObj.ToObject<T>();
+            JToken jToken = msg?.Body as JToken;
+            return jToken.ToObject<T>();
         }
 
         public void Send(object obj)
