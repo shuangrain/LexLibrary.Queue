@@ -1,6 +1,7 @@
 # LexLibrary.Queue
 
-Easy to use MSMQ(Microsoft Message Queuing) for C# and use JSON replace Xml to queue content for performance.
+Encapsulate MSMQ(Microsoft Message Queuing) for easy to use, And Minimize queue content with JSON for performance.
+
 Please let me know if you have any concerns or questions.
 
 # How to use?
