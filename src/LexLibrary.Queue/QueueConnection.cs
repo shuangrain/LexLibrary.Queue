@@ -26,8 +26,10 @@ namespace LexLibrary.Queue
         /// <returns></returns>
         public int Count()
         {
-            var queueCounter = new PerformanceCounter("MSMQ Queue", "Messages in Queue", _messageQueue.Path);
-            return (int)queueCounter.NextValue();
+            using (var queueCounter = new PerformanceCounter("MSMQ Queue", "Messages in Queue", _messageQueue.Path))
+            {
+                return (int)queueCounter.NextValue();
+            }
         }
 
         public T Peek<T>()
