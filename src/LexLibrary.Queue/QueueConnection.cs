@@ -47,18 +47,20 @@ namespace LexLibrary.Queue
             return jToken.ToObject<T>();
         }
 
-        public void Send(object obj)
+        public void Send(object obj, MessagePriority priority)
         {
             using (Message msg = new Message(obj, _messageQueue.Formatter))
             {
+                msg.Priority = priority;
                 _messageQueue.Send(msg);
             }
         }
 
-        public void Send(object obj, MessageQueueTransaction mqTransaction)
+        public void Send(object obj, MessagePriority priority, MessageQueueTransaction mqTransaction)
         {
             using (Message msg = new Message(obj, _messageQueue.Formatter))
             {
+                msg.Priority = priority;
                 _messageQueue.Send(msg, mqTransaction);
             }
         }

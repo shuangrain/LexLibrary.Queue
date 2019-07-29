@@ -15,9 +15,9 @@ namespace LexLibrary.Queue
 
         T Receive<T>(MessageQueueTransaction mqTransaction);
 
-        void Send(object obj);
+        void Send(object obj, MessagePriority priority = MessagePriority.Normal);
 
-        void Send(object obj, MessageQueueTransaction mqTransaction);
+        void Send(object obj, MessagePriority priority, MessageQueueTransaction mqTransaction);
 
         void Purge();
     }

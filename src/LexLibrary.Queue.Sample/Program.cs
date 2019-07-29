@@ -39,10 +39,12 @@ namespace LexLibrary.Queue.Sample
                 foreach (var item in Enumerable.Range(1, 1000))
                 {
                     Console.WriteLine($"Add Data: {item}/1000");
-                    queueConnection.Send(new DataModel
+
+                    var model = new DataModel
                     {
                         Name = $"Data - {item}"
-                    }, mqTransaction);
+                    };
+                    queueConnection.Send(model, MessagePriority.Normal, mqTransaction);
                 }
 
                 mqTransaction.Commit();
