@@ -3,7 +3,7 @@
 Encapsulate MSMQ(Microsoft Message Queuing) for easy to use, and minimize queue content with JSON for performance.    
 Please let me know if you have any concerns or questions.
 
-![](https://i.imgur.com/kzf4JIh.png)
+![](https://i.imgur.com/r1KTXKZ.png)
 
 # How to use?
 
