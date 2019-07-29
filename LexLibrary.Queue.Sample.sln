@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexLibrary.Queue", "src\LexLibrary.Queue\LexLibrary.Queue.csproj", "{66DADFE0-B6FA-4FA8-80A8-A60F6E2F5B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexLibrary.Queue.Sample", "src\LexLibrary.Queue.Sample\LexLibrary.Queue.Sample.csproj", "{D84A018D-4D97-4336-948C-083677F3EE0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{66DADFE0-B6FA-4FA8-80A8-A60F6E2F5B7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66DADFE0-B6FA-4FA8-80A8-A60F6E2F5B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66DADFE0-B6FA-4FA8-80A8-A60F6E2F5B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66DADFE0-B6FA-4FA8-80A8-A60F6E2F5B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D84A018D-4D97-4336-948C-083677F3EE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D84A018D-4D97-4336-948C-083677F3EE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D84A018D-4D97-4336-948C-083677F3EE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D84A018D-4D97-4336-948C-083677F3EE0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D237E61F-E25C-438A-B6B7-2DC4E25EF995}
+	EndGlobalSection
+EndGlobal
