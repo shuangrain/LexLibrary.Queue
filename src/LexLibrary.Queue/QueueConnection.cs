@@ -33,7 +33,8 @@ namespace LexLibrary.Queue
         public T Peek<T>()
         {
             Message msg = _messageQueue.Peek();
-            return (T)msg?.Body;
+            JObject jObj = msg?.Body as JObject;
+            return jObj.ToObject<T>();
         }
 
         public T Receive<T>()
